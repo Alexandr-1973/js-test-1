@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 const images = [
   {
     preview:
@@ -64,25 +72,48 @@ const images = [
   },
 ];
 
-let randomKey;
+const shopObject = {
+  preview:
+    "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",
+  original:
+    "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
+  description: "Lighthouse Coast Sea",
+};
 
-for (let image of images) {
-  randomKey = `randomkey${Math.random()}`;
-  localStorage.setItem(randomKey, JSON.stringify(image));
-}
 
-let markup = "";
+const addbtn = document.querySelector(".add-ls");
+addbtn.addEventListener("click", onAddButton);
+function onAddButton() {
+  addItemLS(shopObject);
+};
 
-for (let i = 0; i < localStorage.length; i++) {
-  if (localStorage.key(i).includes("randomkey")) {
-    const { preview, original, description } = JSON.parse(
-      localStorage.getItem(localStorage.key(i))
-    );
-    markup += `<li class="gallery-item">
-  <a class="gallery-link" href=${original}>
-    <img class="gallery-image" src=${preview} alt="${description}" />
-  </a></li>`;
-  }
-}
 
-document.querySelector(".gallery").innerHTML = markup;
+const removebtn = document.querySelector(".remove-ls");
+removebtn.addEventListener("click", onRemoveButton);
+function onRemoveButton() {
+  removeItemLS(randomKey);
+};
+
+
+
+
+// for (let image of images) {
+//   randomKey = `randomkey${Math.random()}`;
+//   localStorage.setItem(randomKey, JSON.stringify(image));
+// }
+
+// let markup = "";
+
+// for (let i = 0; i < localStorage.length; i++) {
+//   if (localStorage.key(i).includes("randomkey")) {
+//     const { preview, original, description } = JSON.parse(
+//       localStorage.getItem(localStorage.key(i))
+//     );
+//     markup += `<li class="gallery-item">
+//   <a class="gallery-link" href=${original}>
+//     <img class="gallery-image" src=${preview} alt="${description}" />
+//   </a></li>`;
+//   }
+// }
+
+// document.querySelector(".gallery").innerHTML = markup;
