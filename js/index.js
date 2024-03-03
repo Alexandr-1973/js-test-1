@@ -1,119 +1,274 @@
 
+import axios from "axios";
 
+let inLocalStorage = [];
+function getServer() {
+  for (let i = 0; i <= 9; i += 1) {
 
+  };
+}
+  
 
-
-
-
+const res = await axios.get("https://books-backend.p.goit.global/books/top-books");
+console.log(res.data);
 
 const images = [
   {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg",
-    description: "Hokkaido Flower",
+    book_image:
+      "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg",
+
+    title: "LESSONS IN CHEMISTRY",
+
+    list_name: "Audio Fiction",
+
+    description:
+      "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+
+    author: "Bonnie Garmus",
+
+    amazonUrl: "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+
+    appleBooksUrl: "https://goto.applebooks.apple/9780593507537?at=10lIEQ",
+
+    id: "643282b1e85766588626a085",
   },
   {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg",
-    description: "Container Haulage Freight",
+    book_image:
+      "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg",
+
+    title: "LESSONS IN CHEMISTRY",
+
+    list_name: "Audio Fiction",
+
+    description:
+      "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+
+    author: "Bonnie Garmus",
+
+    amazonUrl: "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+
+    appleBooksUrl: "https://goto.applebooks.apple/9780593507537?at=10lIEQ",
+
+    id: "643282b1e85766588626a085",
   },
   {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg",
-    description: "Aerial Beach View",
+    book_image:
+      "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg",
+
+    title: "LESSONS IN CHEMISTRY",
+
+    list_name: "Audio Fiction",
+
+    description:
+      "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+
+    author: "Bonnie Garmus",
+
+    amazonUrl: "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+
+    appleBooksUrl: "https://goto.applebooks.apple/9780593507537?at=10lIEQ",
+
+    id: "643282b1e85766588626a085",
   },
   {
-    preview:
-      "https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg",
-    description: "Flower Blooms",
+    book_image:
+      "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg",
+
+    title: "LESSONS IN CHEMISTRY",
+
+    list_name: "Audio Fiction",
+
+    description:
+      "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+
+    author: "Bonnie Garmus",
+
+    amazonUrl: "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+
+    appleBooksUrl: "https://goto.applebooks.apple/9780593507537?at=10lIEQ",
+
+    id: "643282b1e85766588626a085",
   },
   {
-    preview:
-      "https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg",
-    description: "Alpine Mountains",
+    book_image:
+      "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg",
+
+    title: "LESSONS IN CHEMISTRY",
+
+    list_name: "Audio Fiction",
+
+    description:
+      "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+
+    author: "Bonnie Garmus",
+
+    amazonUrl: "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+
+    appleBooksUrl: "https://goto.applebooks.apple/9780593507537?at=10lIEQ",
+
+    id: "643282b1e85766588626a085",
   },
   {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg",
-    description: "Mountain Lake Sailing",
+    book_image:
+      "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg",
+
+    title: "LESSONS IN CHEMISTRY",
+
+    list_name: "Audio Fiction",
+
+    description:
+      "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+
+    author: "Bonnie Garmus",
+
+    amazonUrl: "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+
+    appleBooksUrl: "https://goto.applebooks.apple/9780593507537?at=10lIEQ",
+
+    id: "643282b1e85766588626a085",
   },
   {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
-    description: "Alpine Spring Meadows",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
-    description: "Nature Landscape",
-  },
-  {
-    preview:
-      "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",
-    original:
-      "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
-    description: "Lighthouse Coast Sea",
+    book_image:
+      "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg",
+
+    title: "LESSONS IN CHEMISTRY",
+
+    list_name: "Audio Fiction",
+
+    description:
+      "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+
+    author: "Bonnie Garmus",
+
+    amazonUrl: "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+
+    appleBooksUrl: "https://goto.applebooks.apple/9780593507537?at=10lIEQ",
+
+    id: "643282b1e85766588626a085",
   },
 ];
 
-const shopObject = {
-  preview:
-    "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",
-  original:
-    "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
-  description: "Lighthouse Coast Sea",
-};
+// const shopObject = {
+//   preview:
+//     "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",
+//   original:
+//     "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
+//   description: "Lighthouse Coast Sea",
+// };
+// shopObject = {
+//   book_image:
+//     "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg",
 
+//   title: "LESSONS IN CHEMISTRY",
+
+//   list_name: "Audio Fiction",
+
+//   description:
+//     "A scientist and single mother living in California in the 1960s becomes a star on a TV cooking show.",
+
+//   author: "Bonnie Garmus",
+
+//   amazonUrl: "https://www.amazon.com/dp/038554734X?tag=NYTBSREV-20",
+
+//   appleBooksUrl: "https://goto.applebooks.apple/9780593507537?at=10lIEQ",
+
+//   id: "643282b1e85766588626a085",
+// };
 
 const addbtn = document.querySelector(".add-ls");
 addbtn.addEventListener("click", onAddButton);
+
 function onAddButton() {
-  addItemLS(shopObject);
-};
-
-
-const removebtn = document.querySelector(".remove-ls");
-removebtn.addEventListener("click", onRemoveButton);
-function onRemoveButton() {
-  removeItemLS(randomKey);
-};
-
-
-
+  for (let image of images) {
+    randomKey = "addbook";
+    localStorage.setItem(randomKey, JSON.stringify(image));
+  }
+}
+// `randomkey${Math.random()}`;
+// const removebtn = document.querySelector(".remove-ls");
+// removebtn.addEventListener("click", onRemoveButton);
+// function onRemoveButton() {
+//   removeItemLS(randomKey);
+// };
 
 // for (let image of images) {
 //   randomKey = `randomkey${Math.random()}`;
 //   localStorage.setItem(randomKey, JSON.stringify(image));
 // }
 
-// let markup = "";
+let markup = "";
 
-// for (let i = 0; i < localStorage.length; i++) {
-//   if (localStorage.key(i).includes("randomkey")) {
-//     const { preview, original, description } = JSON.parse(
-//       localStorage.getItem(localStorage.key(i))
-//     );
-//     markup += `<li class="gallery-item">
-//   <a class="gallery-link" href=${original}>
-//     <img class="gallery-image" src=${preview} alt="${description}" />
-//   </a></li>`;
-//   }
-// }
+for (let i = 0; i < localStorage.length; i++) {
+  if (localStorage.key(i).includes("randomkey")) {
+    const {
+      book_image,
+      title,
+      list_name,
+      description,
+      author,
+      amazonUrl,
+      appleBooksUrl,
+    } = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    markup += `<li class="shoppinglist-book">
+          <img
+            class="shoppinglist-book-image"
+            src="${book_image}"
+            alt="book image"
+          />
+          <div class="shoppinglist-total-div">
+            <div class="shoppinglist-tb-div">
+              <div class="shoppinglist-titcat-div">
+                <h3 class="shoppinglist-book-title">${title}</h3>
+                <p class="shoppinglist-book-category">${list_name}</p>
+              </div>
 
-// document.querySelector(".gallery").innerHTML = markup;
+              <button
+                type="button"
+                class="shoppinglist-book-deletebutton"
+              ></button>
+            </div>
+
+            <div class="shoppinglist-desauthorlink">
+              <p class="shoppinglist-book-description">${description}</p>
+
+              <div class="shoppinglist-low-div">
+                <p class="shoppinglist-book-author">${author}</p>
+                <ul class="shoppinglist-book-low-ul">
+                  <li class="shoppinglist-book-low-li-amazon">
+                    <a
+                      class="shopping-amazon-link"
+                      href="${amazonUrl}"
+                      target="_blank"
+                    >
+                      <img
+                        class="shopping-listamazon-img"
+                        src="./img/amazon.png"
+                        alt="logoAmazon"
+                      />
+                    </a>
+                  </li>
+                  <li class="shoppinglist-book-low-li-apple">
+                    <a
+                      class="shopping-apple-link"
+                      href="${appleBooksUrl}"
+                      target="_blank"
+                    >
+                      <img
+                        class="shopping-apple-img"
+                        src="./img/apple.png"
+                        alt="logo Apple books"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>`;
+  }
+}
+if (markup) {
+  document.querySelector(".books").innerHTML = markup;
+} else {
+  document.querySelector(".books").innerHTML = "";
+}
